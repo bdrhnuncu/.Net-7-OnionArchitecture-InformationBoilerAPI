@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InformationBoilerAPI.Domain\InformationBoilerAPI.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

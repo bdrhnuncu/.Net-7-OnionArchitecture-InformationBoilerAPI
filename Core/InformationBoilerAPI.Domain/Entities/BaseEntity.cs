@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InformationBoilerAPI.Application.Interfaces
+namespace InformationBoilerAPI.Domain.Entities
 {
-    public interface IBaseEntity
+    public class BaseEntity
     {
         public int Id { get; set; }
     }

@@ -40,7 +40,7 @@ namespace InformationBoilerAPI.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Addresses");
+                    b.ToTable("Addresses", (string)null);
                 });
 
             modelBuilder.Entity("InformationBoilerAPI.Domain.Entities.User", b =>
@@ -84,7 +84,7 @@ namespace InformationBoilerAPI.Persistence.Migrations
 
                     b.HasIndex("AddressId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("InformationBoilerAPI.Domain.Entities.User", b =>
