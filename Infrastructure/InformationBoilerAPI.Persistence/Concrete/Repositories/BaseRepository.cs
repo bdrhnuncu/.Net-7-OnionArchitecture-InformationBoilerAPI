@@ -41,7 +41,7 @@ namespace InformationBoilerAPI.Persistence.Concrete.Repositories
             }
         }
 
-        public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> filter = null)
+        public async Task<List<T>> GetAll(Expression<Func<T, bool>> filter = null)
         {
             using (var cntx = new Context())
             {

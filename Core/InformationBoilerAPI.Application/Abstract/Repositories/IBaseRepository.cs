@@ -11,7 +11,7 @@ namespace InformationBoilerAPI.Application.Abstract.Repositories
     {
         Task Create(T entity);
         Task Delete(T entity);
-        Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> filter = null);
+        Task<List<T>> GetAll(Expression<Func<T, bool>> filter = null);
         Task<T> Get(Expression<Func<T, bool>> filter);
         Task Update(T entity);
 

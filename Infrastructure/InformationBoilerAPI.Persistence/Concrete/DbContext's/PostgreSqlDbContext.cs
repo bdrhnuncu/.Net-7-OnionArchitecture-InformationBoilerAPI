@@ -1,9 +1,11 @@
 ﻿using InformationBoilerAPI.Domain.Entities;
 using InformationBoilerAPI.Persistence.Concrete.Configuration;
+using InformationBoilerAPI.Persistence.Concrete.Mapping;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,10 +20,6 @@ namespace InformationBoilerAPI.Persistence.Concrete.DbContext_s
         {
             optionsBuilder.UseNpgsql(ConnStringConfig.PostgreSqlConnString);
         }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-
-        }
+        
     }
 }
