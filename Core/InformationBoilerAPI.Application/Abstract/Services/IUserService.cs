@@ -15,8 +15,8 @@ namespace InformationBoilerAPI.Application.Abstract.Services
         Task<IResult> Update(UserUpdateDto userUpdateDto);
         Task<IResult> Delete(UserDto userDto);
         Task<IDataResult<UserDto>> GetById(int id);
-        Task<IDataResult<IEnumerable<UserDto>>> GetAll();
-        Task<IDataResult<IEnumerable<UserDto>>> GetAllOrderByRegisterDate();
+        Task<IDataResult<List<UserDto>>> GetAll();
+        Task<IDataResult<List<UserDto>>> GetAllOrderByRegisterDate();
         Task<IDataResult<string>> Login(UserLoginDto userLoginDto);//string because we will return jwt token...
     }
 }

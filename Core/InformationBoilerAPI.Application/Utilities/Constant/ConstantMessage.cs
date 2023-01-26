@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace InformationBoilerAPI.Application.Utilities.Constant
 {
-    internal class ConstantMessage
+    public static class ConstantMessage
     {
+        public static string EmailExist => "This Email already exist";
+        public static string PhoneExist => "This Phone already exist";
     }
 }

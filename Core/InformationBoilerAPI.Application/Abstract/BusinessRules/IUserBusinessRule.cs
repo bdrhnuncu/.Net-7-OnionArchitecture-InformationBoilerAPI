@@ -1,4 +1,5 @@
-﻿using InformationBoilerAPI.Domain.Entities;
+﻿using InformationBoilerAPI.Application.Abstract.Return_s;
+using InformationBoilerAPI.Domain.Entities;
 using InformationBoilerAPI.Domain.Entities.Dto_s.UserDto_s;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace InformationBoilerAPI.Application.Abstract.BusinessRules
 {
     public interface IUserBusinessRule
     {
-        Task<bool> CheckUser(UserCreateDto user);
-        Task<bool> CheckLogin(UserLoginDto userLoginDto);
+        Task<IResult> CheckUser(string email, string phone);
+        Task<IResult> CheckLogin(UserLoginDto userLoginDto);
     }
 }
