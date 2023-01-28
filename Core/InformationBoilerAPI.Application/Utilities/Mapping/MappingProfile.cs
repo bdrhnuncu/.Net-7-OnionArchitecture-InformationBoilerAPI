@@ -17,6 +17,7 @@ namespace InformationBoilerAPI.Application.Utilities.Mapping
             CreateMap<UserCreateDto, Address>().ReverseMap()
                 .ForMember(x => x.Country, z => z.MapFrom(y => y.Country))
                 .ForMember(x => x.City, z => z.MapFrom(y => y.City));
+            CreateMap<UserUpdateDto, User>().ReverseMap();
         }
     }
 }

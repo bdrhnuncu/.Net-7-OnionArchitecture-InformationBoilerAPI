@@ -3,9 +3,7 @@ using InformationBoilerAPI.Application.Abstract.BusinessRules;
 using InformationBoilerAPI.Application.Abstract.Repositories;
 using InformationBoilerAPI.Application.Abstract.Return_s;
 using InformationBoilerAPI.Application.Abstract.Services;
-using InformationBoilerAPI.Application.Utilities.Return_s;
 using InformationBoilerAPI.Domain.Entities;
-using InformationBoilerAPI.Domain.Entities.Dto_s.AddressDto_s;
 using InformationBoilerAPI.Domain.Entities.Dto_s.UserDto_s;
 using System;
 using System.Collections.Generic;
@@ -29,6 +27,10 @@ namespace InformationBoilerAPI.Application.Concrete.Services
             _userBusinessRule = userBusinessRule;
         }
 
+        //authorization
+        //cache
+        //validation
+        //transaction
         public async Task<IResult> Create(UserCreateDto userCreateDto)
         {
             var businessRule = await _userBusinessRule.CheckUser(userCreateDto.Email, userCreateDto.Phone);
