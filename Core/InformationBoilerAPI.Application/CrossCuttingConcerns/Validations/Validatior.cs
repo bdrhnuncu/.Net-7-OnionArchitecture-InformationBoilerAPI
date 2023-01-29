@@ -11,7 +11,11 @@ namespace InformationBoilerAPI.Application.CrossCuttingConcerns.Validations
     {
         public Validatior(IValidator validator, object obje)
         {
-            
+            var validate = new ValidationContext<object>(obje);
+            var result =  validator.Validate(validate);
+            if (!result.IsValid)
+                throw new ValidationException(result.Errors);
+
         }
     }
 }

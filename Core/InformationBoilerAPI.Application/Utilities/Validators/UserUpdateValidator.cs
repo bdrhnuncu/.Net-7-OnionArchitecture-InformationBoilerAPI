@@ -14,7 +14,6 @@ namespace InformationBoilerAPI.Application.Utilities.Validators
         public UserUpdateValidator()
         {
             RuleFor(x => x.Name).Must(OnlyStringValue);
-            RuleFor(x => x.Password).Length(5, 20);
             RuleFor(x => x.Email).EmailAddress();
             RuleFor(x => x.Phone).Must(PhoneNumber);
             RuleFor(x => x.Country).Must(OnlyStringValue);
