@@ -1,6 +1,5 @@
 ﻿using InformationBoilerAPI.Domain.Entities;
-using InformationBoilerAPI.Persistence.Concrete.Configuration;
-using InformationBoilerAPI.Persistence.Concrete.Mapping;
+using InformationBoilerAPI.Persistence.Configuration;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

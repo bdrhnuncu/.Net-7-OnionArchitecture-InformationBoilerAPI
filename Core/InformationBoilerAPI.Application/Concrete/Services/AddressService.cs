@@ -3,7 +3,6 @@ using InformationBoilerAPI.Application.Abstract.Repositories;
 using InformationBoilerAPI.Application.Abstract.Return_s;
 using InformationBoilerAPI.Application.Abstract.Services;
 using InformationBoilerAPI.Domain.Entities;
-using InformationBoilerAPI.Domain.Entities.Dto_s.AddressDto_s;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +26,7 @@ namespace InformationBoilerAPI.Application.Concrete.Services
             throw new NotImplementedException();
         }
 
-        public Task<IResult> Update(AddressUpdateDto addressUpdateDto)
+        public Task<IResult> Update(Address address)
         {
             throw new NotImplementedException();
         }

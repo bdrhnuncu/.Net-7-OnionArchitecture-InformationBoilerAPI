@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InformationBoilerAPI.Persistence.Concrete.Configuration
+namespace InformationBoilerAPI.Persistence.Configuration
 {
     public static class ConnStringConfig
     {
         public static string PostgreSqlConnString
         {
-            get 
+            get
             {
                 ConfigurationManager configurationManager = new();
                 configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../Presentation/InformationBoilerAPI.API"));

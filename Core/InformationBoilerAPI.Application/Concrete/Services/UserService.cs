@@ -3,6 +3,9 @@ using InformationBoilerAPI.Application.Abstract.BusinessRules;
 using InformationBoilerAPI.Application.Abstract.Repositories;
 using InformationBoilerAPI.Application.Abstract.Return_s;
 using InformationBoilerAPI.Application.Abstract.Services;
+using InformationBoilerAPI.Application.CrossCuttingConcerns.Aspects.Autofac.Transaction;
+using InformationBoilerAPI.Application.CrossCuttingConcerns.Aspects.Autofac.Validation;
+using InformationBoilerAPI.Application.Utilities.Validators;
 using InformationBoilerAPI.Domain.Entities;
 using InformationBoilerAPI.Domain.Entities.Dto_s.UserDto_s;
 using System;
@@ -29,8 +32,8 @@ namespace InformationBoilerAPI.Application.Concrete.Services
 
         //authorization
         //cache
-        //validation
-        //transaction
+        [ValidationAspect(typeof(UserCreateValidator))]
+        [TransactionAspect]
         public async Task<IResult> Create(UserCreateDto userCreateDto)
         {
             var businessRule = await _userBusinessRule.CheckUser(userCreateDto.Email, userCreateDto.Phone);

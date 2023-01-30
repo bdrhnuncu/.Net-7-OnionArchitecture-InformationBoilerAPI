@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace InformationBoilerAPI.Application.CrossCuttingConcerns.Validations
 {
-    public class Validatior
+    public static class CheckValidation
     {
-        public Validatior(IValidator validator, object obje)
+        public static void Validate(IValidator validator, object obje)
         {
             var validate = new ValidationContext<object>(obje);
             var result =  validator.Validate(validate);

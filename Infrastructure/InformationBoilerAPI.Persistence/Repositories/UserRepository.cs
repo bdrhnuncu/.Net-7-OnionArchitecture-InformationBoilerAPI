@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InformationBoilerAPI.Persistence.Concrete.Repositories
+namespace InformationBoilerAPI.Persistence.Repositories
 {
     public class UserRepository : BaseRepository<User, PostgreSqlDbContext>, IUserRepository
     {

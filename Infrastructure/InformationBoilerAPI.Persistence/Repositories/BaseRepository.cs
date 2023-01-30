@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InformationBoilerAPI.Persistence.Concrete.Repositories
+namespace InformationBoilerAPI.Persistence.Repositories
 {
     public class BaseRepository<T, Context> : IBaseRepository<T>
         where T : class, new()
@@ -53,10 +53,10 @@ namespace InformationBoilerAPI.Persistence.Concrete.Repositories
 
         public async Task Update(T entity)
         {
-            using (var cntx = new Context()) 
+            using (var cntx = new Context())
             {
                 var update = cntx.Entry(entity);
-                update.State = EntityState.Modified; 
+                update.State = EntityState.Modified;
                 await cntx.SaveChangesAsync();
             }
         }

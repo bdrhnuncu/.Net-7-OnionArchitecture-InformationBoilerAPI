@@ -2,7 +2,7 @@
 using InformationBoilerAPI.Application.Abstract.Repositories;
 using InformationBoilerAPI.Application.Abstract.Services;
 using InformationBoilerAPI.Application.Concrete.Services;
-using InformationBoilerAPI.Persistence.Concrete.Repositories;
+using InformationBoilerAPI.Persistence.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
